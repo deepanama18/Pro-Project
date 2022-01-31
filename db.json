@@ -1,0 +1,36 @@
+{
+    "profile" : [
+         {
+             "title": "Storage Management",
+             "title2": "Devices",
+             "title1": "Camera Uploads"
+         }
+    ],
+     "user" : [
+         {
+             "title":"The next Big Thing",
+             "data": "Top Secret",
+             "card": 1
+         },{
+            "title":"The next Big Thing",
+            "data": "Top Secret",
+            "card": 2 
+         }
+         ,{
+            "title":"The next Big Thing",
+            "data": "Top Secret",
+            "card": 3 
+         }
+         ,{
+            "title":"The next Big Thing",
+            "data": "Top Secret",
+            "card": 4 
+         }
+     ],
+     "local": [
+         {
+             "s" : "Franky Wah -Aftertime",
+             "din" : "Annie's new car"
+         }
+     ]
+}
