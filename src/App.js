@@ -22,7 +22,7 @@ function App() {
         <div>
           {/* <Nav /> */}
           <Routes>
-            <Route path="/" element={<Onbording />} />
+            <Route path="/onbording" element={<Onbording />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/Localstorage" element={<LocalStorage />} />
             <Route path="/Upload" element={<Upload />} />

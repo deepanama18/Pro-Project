@@ -41,7 +41,7 @@ function Upload() {
       placeholder='Search'
       onChange={(e) => getSearchKey(e.target.value)}
     />
-    <div style={{ marginTop: "5px", display: "flex",justifyContent:"center"}} >
+    <div style={{ marginTop: "5px", display: "flex",justifyContent:"center",marginRight:"40px"}} >
       <span style={{ flexDirection: "column", width: "50px", padding: "20px", margin: "20px" }}>
         <img src={background} />
         <b>Video</b>

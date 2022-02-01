@@ -12,7 +12,7 @@ function Onbording() {
         <Link style={{marginTop:"50px"}}
         to={`/Home`}
         >
-        <img src={Illustation} alt='onbord img' height={"600px"} width={"300px"} 
+        <img src={Illustation} alt='onbord img' height={"680px"} width={"350px"} 
           style={{marginTop:"30px"}}
         />
         {/* <img src={icontab} alt='' /> */}
