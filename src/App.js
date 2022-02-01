@@ -1,19 +1,13 @@
-import './App.css';
-import Home from './components/Home';
-import Onbording from './components/Onbording';
-import LocalStorage from './components/LocalStorage';
-import Upload from './components/Upload';
-import Notifications from './components/Notifications';
-import Profile from './components/Profile';
-import StorageManagement from './components/StorageManagement'
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
-import Nav from './components/Nav';
-
-
+import "./App.css";
+import Home from "./components/Home";
+import Onbording from "./components/Onbording";
+import LocalStorage from "./components/LocalStorage";
+import Upload from "./components/Upload";
+import Notifications from "./components/Notifications";
+import Profile from "./components/Profile";
+import StorageManagement from "./components/StorageManagement";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav";
 
 function App() {
   return (
