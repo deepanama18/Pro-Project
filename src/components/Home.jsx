@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import BottomNavigation from '@mui/material/BottomNavigation';
-import CloudIcon from '@mui/icons-material/Cloud';
-import PersonIcon from '@mui/icons-material/Person';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Link } from "react-router-dom";
 import local from '../images/icons1.png';
 import local1 from '../images/icons2.png';
@@ -28,69 +23,89 @@ function Home() {
     })
   }, [])
 
+  // const [state, setState] = useState([])
+
+  const getSearchKey = (keyword) => {
+    axios
+      .get("http://localhost:3003/user?q=" + keyword)
+      .then(res => {
+        setHome(res.data)
+      })
+  }
+
   return (
     <>
-    <div height={"600px"} width={"300px"} >
-      <h1 >Home Page</h1>
-      <div className="container">
-      <div className="row">
-    
-            {
-              home.map(ele => (
-                <>
-                <div className="col-md-4" style={{width:"150px", height:"150px",margin:"20px",padding:"20px"}} >
-                  <div className="card bg-secondary my-2" >
-             
-                    <div className="card-body" >
-                      <h5 className="rounded-lg">{ele.title}</h5>
+      <h1 className='my-2' style={{color:"blue"}}>Home Page</h1>
+      <input type="text"
+      style={{ marginTop: "30px", textAlign: "center", padding: "10px" }}
+      placeholder='Search'
+      onChange={(e) => getSearchKey(e.target.value)}
+    />
+      <div className="container my-4 py-6"  >
+        <div className="row" >
+          {/* <div className='col-md-6'  */}
+          {/* // style={{marginLeft:"200px"}} */}
+          
+            <div className='row' >
+              {
+                home.map(ele => (
+                  <>
+                    <div className="col-md-6" >
+                      <div className="card bg-secondary my-2" >
 
-                      <p className="rounded-lg">{ele.data}</p>
+                        <div className="card-body" >
+                          <h5 className="rounded-lg">{ele.title}</h5>
+
+                          <p className="rounded-lg">{ele.data}</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  </div>
-                </>
-              ))
-            }
+                  </>
+                ))
+              }
             </div>
-            <div className='col-md-6'>
+          {/* </div> */}
+     {/* <div className='col-md-6'>
+          </div> */}
+        </div>
+      </div>
+      <div className='container-fluid bg-secondary position-fixed bottom-0 pb-2'>
+      <div className='row'>
+        <div className='col-md-12 text-center'>
+          <BottomNavigation value={value} onChange={handleChange} className='bg-secondary'
+          >
+            <Link
+              to={`/Home`}
+            >
+              <img src={local} alt="" className='p-3 w-150 h-100' />
+            </Link>
+            <Link
+              to={`/LocalStorage`}
+            >
+              <img src={local1} alt="" className='p-3 w-150 h-100' />
 
-            </div>
-            </div>
-    
-      <BottomNavigation value={value} onChange={handleChange}
-        style={{marginLeft:"10px", padding:"30px"}}
-        // position:"fixed", bottom:"0"
-      >
-        <Link
-          to={`/Home`}
-        >
-          <img src={local} alt="" />
-        </Link>
-        <Link
-          to={`/LocalStorage`}
-        >
-          <img src={local1} alt="" />
-          
-        </Link>
-        <Link
-          to={`/Upload`}
-        >
-          <img src={local2} alt="" />
-          
-        </Link>
-        <Link
-          to={`/Notifications`}
-        >
-          <img src={local3} alt="" />
-        
-        </Link>
-        <Link
-          to={`/Profile`}
-        >
-          <img src={local4} alt="" />
-         
-        </Link>
-      </BottomNavigation>
+            </Link>
+            <Link
+              to={`/Upload`}
+            >
+              <img src={local2} alt="" className='p-3 w-150 h-100' />
+
+            </Link>
+            <Link
+              to={`/Notifications`}
+            >
+              <img src={local3} alt="" className='p-3 w-150 h-100' />
+
+            </Link>
+            <Link
+              to={`/Profile`}
+            >
+              <img src={local4} alt="" className='p-3 w-150 h-100' />
+
+            </Link>
+          </BottomNavigation>
+        </div>
+      </div>
       </div>
     </>
   );

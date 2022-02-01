@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <div>
-          <Nav />
+          {/* <Nav /> */}
           <Routes>
             <Route path="/" element={<Onbording />} />
             <Route path="/Home" element={<Home />} />

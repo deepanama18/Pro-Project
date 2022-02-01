@@ -9,28 +9,55 @@
      "user" : [
          {
              "title":"The next Big Thing",
-             "data": "Top Secret",
+             "data": "12 f-2.1 gb",
              "card": 1
          },{
-            "title":"The next Big Thing",
-            "data": "Top Secret",
+            "title":"Top Secret",
+            "data": "7 f-523 mb",
             "card": 2 
          }
          ,{
-            "title":"The next Big Thing",
-            "data": "Top Secret",
+            "title":"Freebie Project",
+            "data": "3 f-192 mb",
             "card": 3 
          }
          ,{
-            "title":"The next Big Thing",
-            "data": "Top Secret",
+            "title":"Landon Meetup",
+            "data": "453 f-1.7 gb",
             "card": 4 
          }
      ],
      "local": [
          {
-             "s" : "Franky Wah -Aftertime",
-             "din" : "Annie's new car"
+             "title" : "Franky Wah-Aftertime",
+             "data": "mp3-9.2 mb",
+             "images": "icons_with background_category.png"
+         },{
+            "title" : "Annie's New CarRide",
+            "data": "jpg-4.8 mb",
+            "images": "icons_with background_category (1).png"
+          } ,{
+            "title" : "Top Secret Archive",
+            "data": "zip-3.7 gb",
+            "images": "icons_with background_category (2).png"
+         }
+     ], 
+     "storage" : [
+         {
+             "title" : "TikTok dance video",
+             "data": "mov-1 time",
+             "images": "icons_with background_category (3).png",
+             "image" : "Combined.png"
+         },{
+             "title": "Selfie without beard",
+             "data" : "jpg- 2 times",
+             "images" : "icons_with background_category (1).png",
+             "image" : "Combined.png"
+         },{
+             "title": "University lectures",
+             "data" : "jpg- 2 times",
+             "images" : "icons_with background_category (2).png",
+             "image" : "Combined.png"
          }
      ]
 }
