@@ -11,7 +11,7 @@ import local2 from "../images/icons3.png";
 import local3 from "../images/icons4.png";
 import local4 from "../images/icons5.png";
 import { Link } from "react-router-dom";
-import up from '../images/Local storage1.png'
+import up from "../images/Local storage1.png";
 
 function LocalStorage() {
   const [state, setState] = useState([]);
@@ -29,35 +29,17 @@ function LocalStorage() {
   };
 
   return (
-    <div 
-    // style={{ width: "375px",height: "112px"}}
-    >
-            <div className="row">
-          {/* <h1 className="my-4 text-primary ">HOME PAGE</h1> */}
-          <div className="col-md-4 mx-auto">
-            <img src={up} alt="Page" className="img-fluid img-responsive" style={{width:"100%",height:"100%"}}  />
-          </div>
+    <div>
+      <div className="row">
+        <div className="col-md-4 mx-auto">
+          <img
+            src={up}
+            alt="Page"
+            className="img-fluid img-responsive"
+            style={{ width: "100%", height: "100%" }}
+          />
         </div>
-          {/* <div 
-      style={{ display: "flex", justifyContent: "center" }}
-      > */}
-         {/* <h1 style={{ padding: "5px", margin: "0px" }}> */}
-          {/* Profile */}
-          {/* <img src={nav} alt="" /> */}
-          {/* <img src={up} alt=""  style={{width:"405px",height:"140px"}}/> */}
-        {/* </h1>  */}
-        {/* <img src={profile} alt="" /> */}
-      {/* </div> */}
-      {/* <h1
-        style={{
-          margin: "20px",
-          fontFamily: "sans-serif",
-          fontSize: "35px",
-          color: "blue",
-        }}
-      >
-        Local Storage
-      </h1> */}
+      </div>
       <input
         type="text"
         style={{ marginTop: "10px", textAlign: "center", padding: "10px" }}
@@ -97,65 +79,38 @@ function LocalStorage() {
         </span>
       </div>
       <div className="row mb-2">
-          <div className="col-md-4 mx-auto">
-            <div className="row mx-auto">
-              {state.map((ele) => (
-                <>
-                  <div className="col-md-12">
-                    <div className="card bg-secondary my-2 rounded-5">
-                      <div className="card-body" style={{ display: "flex", justifyContent: "space-between" }}>
+        <div className="col-md-4 mx-auto">
+          <div className="row mx-auto">
+            {state.map((ele) => (
+              <>
+                <div className="col-md-12">
+                  <div className="card bg-secondary my-2 rounded-5">
+                    <div
+                      className="card-body"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
                       <img src={ele.images} style={{ display: "inline" }} />
-                        <h5 className="rounded-lg text-warning">{ele.title}</h5>
-                        <p className="rounded-lg text-white text-uppercase"
-                         style={{ display: "inline", marginLeft: "30px" }}
-                        >{ele.data}</p>
-                      </div>
-                    </div>
-                  </div>
-                </>
-              ))}
-            </div>
-          </div>
-        </div>
-      {/* <div>
-        <div className="row">
-          {state.map((ele) => (
-            <>
-              <div
-                className="col-md-12"
-                style={{
-                  justifyContent: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <div className="card bg-secondary my-2">
-                  <div className="card-body">
-                    <div style={{ display: "flex", justifyContent: "center" }}>
-                      <img src={ele.images} style={{ display: "inline" }} />
-                      <h5
-                        className="rounded-lg"
+                      <h5 className="rounded-lg text-warning">{ele.title}</h5>
+                      <p
+                        className="rounded-lg text-white text-uppercase"
                         style={{ display: "inline", marginLeft: "30px" }}
                       >
-                        {ele.title}
-                      </h5>
+                        {ele.data}
+                      </p>
                     </div>
-                    <p
-                      className="rounded-lg"
-                      style={{ display: "inline", marginLeft: "30px" }}
-                    >
-                      {ele.data}
-                    </p>
                   </div>
                 </div>
-              </div>
-            </>
-          ))}
+              </>
+            ))}
+          </div>
         </div>
-      </div> */}
+      </div>
       <div className="row mb-2">
-      <div className="col-md-4 mx-auto">
-        <div className="row mx-auto" >
+        <div className="col-md-4 mx-auto">
+          <div className="row mx-auto">
             <BottomNavigation className="bg-secondary">
               <Link to={`/Home`}>
                 <img src={local} alt="" className="p-3 w-150 h-100" />
