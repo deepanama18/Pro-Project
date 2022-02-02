@@ -10,19 +10,22 @@ import notify from "../images/Notifications.png";
 
 function Notifications() {
   return (
-    <div>
+    <div className="container py-3">
+      <div className="row">
+        <div className="col-md-4 mx-auto">
+          <img
+            src={notify}
+            alt="Page"
+            className="img-fluid img-responsive"
+            style={{ width: "100%", height: "80%" }}
+          />
+        </div>
+      </div>
       <div>
-        <img
-          src={notify}
-          alt=""
-          height={"700px"}
-          width={"400px"}
-          style={{ justifyContent: "center" }}
-        />
-        <div className="container-fluid bg-secondary position-fixed bottom-0 pb-2">
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <BottomNavigation className="bg-secondary">
+        <div className="row" >
+          <div className="col-md-4 mx-auto">
+            <div className="row" >
+              <BottomNavigation className="bg-secondary  bottom-0">
                 <Link to={`/Home`}>
                   <img src={local} alt="" className="p-3 w-150 h-100" />
                 </Link>

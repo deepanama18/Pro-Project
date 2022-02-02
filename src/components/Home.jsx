@@ -7,6 +7,7 @@ import local2 from "../images/icons3.png";
 import local3 from "../images/icons4.png";
 import local4 from "../images/icons5.png";
 import axios from "axios";
+import page from "../images/Home (3).png";
 
 function Home() {
   const [value, setValue] = React.useState("recents");
@@ -31,35 +32,51 @@ function Home() {
 
   return (
     <>
-      <h1 className="my-2" style={{ color: "blue" }}>
-        Home Page
-      </h1>
-      <input
-        type="text"
-        style={{ marginTop: "30px", textAlign: "center", padding: "10px" }}
-        placeholder="Search"
-        onChange={(e) => getSearchKey(e.target.value)}
-      />
-      <div className="container my-4 py-6">
+      <div className="container py-3">
         <div className="row">
-          {home.map((ele) => (
-            <>
-              <div className="col-md-6">
-                <div className="card bg-secondary my-2">
-                  <div className="card-body">
-                    <h5 className="rounded-lg">{ele.title}</h5>
-
-                    <p className="rounded-lg">{ele.data}</p>
+          <div className="col-md-4 mx-auto">
+            <img
+              src={page}
+              alt="Page"
+              className="img-fluid img-responsive"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-4 my-4 mx-auto">
+            <input
+              className="form-control mx-auto"
+              type="text"
+              placeholder="Search"
+              onChange={(e) => getSearchKey(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="row mb-2">
+          <div className="col-md-4 mx-auto">
+            <div className="row mx-auto">
+              {home.map((ele) => (
+                <>
+                  <div className="col-md-6">
+                    <div className="card bg-secondary my-2 rounded-5">
+                      <div className="card-body">
+                        <h5 className="rounded-lg text-warning">{ele.title}</h5>
+                        <p className="rounded-lg text-white text-uppercase">
+                          {ele.data}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </>
-          ))}
+                </>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-      <div className="container-fluid bg-secondary position-fixed bottom-0 pb-2">
-        <div className="row">
-          <div className="col-md-12 text-center">
+      <div className="row mb-2">
+        <div className="col-md-4 mx-auto">
+          <div className="row mx-auto">
             <BottomNavigation
               value={value}
               onChange={handleChange}

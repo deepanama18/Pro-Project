@@ -6,10 +6,9 @@ import local1 from "../images/icons2.png";
 import local2 from "../images/icons3.png";
 import local3 from "../images/icons4.png";
 import local4 from "../images/icons5.png";
-import nav from "../images/nav.png";
 import stroke from "../images/Stroke.png";
-import userDetail from "../images/Udetails.png";
 import axios from "axios";
+import prof from "../images/Profile (2).png";
 
 function Profile() {
   const [profile, setProfile] = useState([]);
@@ -22,83 +21,92 @@ function Profile() {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <h1 style={{ padding: "20px", margin: "30px" }}>
-          Profile
-          <img src={nav} alt="" />
-        </h1>
+      <div className="row">
+        <div className="col-md-4 mx-auto">
+          <img
+            src={prof}
+            alt="Page"
+            className="img-fluid img-responsive"
+            style={{ width: "100%", height: "100%" }}
+          />
+        </div>
       </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <h1 style={{ padding: "5px", margin: "5px" }}>
-          <img src={userDetail} alt="" />
-        </h1>
-      </div>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col md-2">
+      <div className="row mb-2 py-3">
+        <div className="col-md-4 mx-auto">
+          <div className="row mx-auto">
             {profile.map((ele) => (
-              <div>
-                <div className="card bg-secondary my-2">
-                  <div
-                    className="card-body"
-                    style={{
-                      textAlign: "left",
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <h5 className="card-title">{ele.title}</h5>
-                    <Link to={`/StorageManagement`}>
+              <>
+                <div className="col-md-12">
+                  <div className="card bg-secondary my-2 rounded-5">
+                    <div
+                      className="card-body"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h5 className="rounded-lg text-warning">{ele.title}</h5>
+                      <Link to={`/StorageManagement`}>
+                        <img src={stroke} alt="" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="row mb-2">
+        <div className="col-md-4 mx-auto">
+          <div className="row mx-auto">
+            {profile.map((ele) => (
+              <>
+                <div className="col-md-12">
+                  <div className="card bg-secondary my-2 rounded-5">
+                    <div
+                      className="card-body"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h5 className="rounded-lg text-warning">{ele.title2}</h5>
                       <img src={stroke} alt="" />
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </>
             ))}
           </div>
         </div>
       </div>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col md-2">
+      <div className="row mb-2">
+        <div className="col-md-4 mx-auto">
+          <div className="row mx-auto">
             {profile.map((ele) => (
-              <div>
-                <div className="card bg-secondary my-2">
-                  <div
-                    className="card-body"
-                    style={{
-                      textAlign: "left",
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <h5 className="card-title">{ele.title2}</h5>
-                    <img src={stroke} alt="" />
+              <>
+                <div className="col-md-12">
+                  <div className="card bg-secondary my-2 rounded-5">
+                    <div
+                      className="card-body"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h5 className="rounded-lg text-warning">{ele.title1}</h5>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </>
             ))}
           </div>
         </div>
       </div>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col md-2">
-            {profile.map((ele) => (
-              <div>
-                <div className="card bg-secondary my-2">
-                  <div className="card-body" style={{ textAlign: "left" }}>
-                    <h5 className="card-title">{ele.title1}</h5>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid bg-secondary position-fixed bottom-0 pb-2">
-        <div className="row">
-          <div className="col-md-12 text-center">
+      <div className="row mb-2">
+        <div className="col-md-4 mx-auto">
+          <div className="row mx-auto">
             <BottomNavigation className="bg-secondary">
               <Link to={`/Home`}>
                 <img src={local} alt="" className="p-3 w-150 h-100" />

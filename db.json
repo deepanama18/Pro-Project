@@ -12,7 +12,7 @@
              "data": "12 f-2.1 gb",
              "card": 1
          },{
-            "title":"Top Secret",
+            "title":"Top secret story",
             "data": "7 f-523 mb",
             "card": 2 
          }
@@ -53,11 +53,8 @@
              "data" : "jpg- 2 times",
              "images" : "icons_with background_category (1).png",
              "image" : "Combined.png"
-         },{
-             "title": "University lectures",
-             "data" : "jpg- 2 times",
-             "images" : "icons_with background_category (2).png",
-             "image" : "Combined.png"
          }
+
      ]
 }
+
